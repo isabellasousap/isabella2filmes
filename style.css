@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    
+}
+div{
+    color: whitesmoke;
+}
+h1{
+    color: white;
+}
+
+.filme {
+    position: relative;
+    background: #f53636;
+    color: white;
+    padding: 20px 40px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+
+.filme::before,
+.filme::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        #000 0px,
+        #000 10px,
+        #fff 10px,
+        #fff 20px
+    );
+}
+
+/* Lado esquerdo */
+.filme::before {
+    left: 0;
+}
+
+/* Lado direito */
+.filme::after {
+    right: 0;
+}
+
+
+/* Estilo do título */
+.titulo {
+    font-size: 3em;
+    color: #ffd369;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.titulo:hover {
+    transform: scale(1.2) rotate(-2deg);
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffd369, 0 0 20px #ffd369;
+}
